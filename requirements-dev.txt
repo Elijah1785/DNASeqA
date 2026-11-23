@@ -1,0 +1,46 @@
+# DNASeqA Test Files
+
+Place this `tests` folder beside your `src` folder:
+
+```text
+DNASeqA/
+├── src/
+│   ├── main.py
+│   ├── region_scanner.py
+│   └── primer3_design.py
+├── tests/
+│   ├── conftest.py
+│   ├── test_region_scanner.py
+│   └── test_primer3_design.py
+└── requirements-dev.txt
+```
+
+Install testing dependencies:
+
+```powershell
+py -m pip install -r requirements-dev.txt
+```
+
+Run all tests from the repository root:
+
+```powershell
+py -m pytest
+```
+
+Run only scanner tests:
+
+```powershell
+py -m pytest tests/test_region_scanner.py
+```
+
+Run only Primer3 tests:
+
+```powershell
+py -m pytest tests/test_primer3_design.py
+```
+
+Show more detail:
+
+```powershell
+py -m pytest -v
+```
